@@ -4,13 +4,13 @@
                         <i class="icon-menu"></i>
                     </button>
                     <a href="index-2.html" class="logo">
-                        <img src="~/images/logo.png" alt="Porto Logo">
+                        <img src="/images/logo.png" alt="Porto Logo">
                     </a>
                     <nav class="main-nav">
                         <ul class="menu sf-arrows">
                             <li class="active"><a href="index-2.html">Home</a></li>
                             <li>
-                                <a href="category.html" class="sf-with-ul">Categories</a>
+                                <a asp-controller="Category" asp-action="Index" class="sf-with-ul">Categories</a>
                                 <div class="megamenu megamenu-fixed-width">
                                     <div class="row">
                                         <div class="col-lg-8">
@@ -50,7 +50,7 @@
                                         <div class="col-lg-4">
                                             <div class="banner">
                                                 <a href="#">
-                                                    <img src="~/images/menu-banner-2.jpg" alt="Menu banner">
+                                                    <img src="/images/menu-banner-2.jpg" alt="Menu banner">
                                                 </a>
                                             </div><!-- End .banner -->
                                         </div><!-- End .col-lg-4 -->
@@ -103,7 +103,7 @@
                                         <div class="col-lg-4">
                                             <div class="banner">
                                                 <a href="#">
-                                                    <img src="~/images/menu-banner.jpg" alt="Menu banner" class="product-promo">
+                                                    <img src="/images/menu-banner.jpg" alt="Menu banner" class="product-promo">
                                                 </a>
                                             </div><!-- End .banner -->
                                         </div><!-- End .col-lg-4 -->
@@ -151,14 +151,12 @@
                             <li class="special-effect active">
                                 <a href="#">Special Offer</a>
                             </li>
-                            <li class="buy-effect"><a href="https://1.envato.market/DdLk5" target="_blank"><span>buy Porto</span></a></li>
                             <li class="more-menu">
                                 <a href="#">More</a>
                                 <ul>      
                                     <li class="special-effect">
                                         <a href="#">Special Offer</a>
                                     </li>
-                                    <li class="buy-effect"><a href="https://1.envato.market/DdLk5" target="_blank"><span>buy Porto</span></a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -176,7 +174,7 @@
                         </form>
                     </div><!-- End .header-search -->
                     <div class="horizontal_bar"></div>
-                    <a href="login.html">
+                    <a asp-controller="LoginAndCreate" asp-action="Index">
                         <div class="header-user">
                             <i class="porto-icon-user-2"></i>
                             <div class="header-userinfo">
@@ -216,7 +214,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.html" class="product-image">
-                                                <img src="~/images/products/cart/product-1.jpg" alt="product">
+                                                <img src="/images/products/cart/product-1.jpg" alt="product">
                                             </a>
                                             <a href="#" class="btn-remove" title="Remove Product"><i class="porto-icon-retweet"></i></a>
                                         </figure>
@@ -236,7 +234,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.html" class="product-image">
-                                                <img src="~/images/products/cart/product-2.jpg" alt="product">
+                                                <img src="/images/products/cart/product-2.jpg" alt="product">
                                             </a>
                                             <a href="#" class="btn-remove" title="Remove Product"><i class="porto-icon-retweet"></i></a>
                                         </figure>
