@@ -1,48 +1,185 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - EticaretBA.UI</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>@ViewBag.Title ETicaret</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Porto - Bootstrap eCommerce Template">
+    <meta name="author" content="SW-THEMES">
+        
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+    
+    
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: [ 'Open+Sans:300,400,600,700,800','Poppins:300,400,500,600,700' ] }
+        };
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = '/js/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    
+    @await Html.PartialAsync("_LayoutCssPartial")
+    @await RenderSectionAsync("Css",false)
+    
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EticaretBA.UI</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
+    <div class="home page-wrapper">
+        <header class="header">
+           @await Html.PartialAsync("_LayoutAdv1Partial")
 
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2021 - EticaretBA.UI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @await Html.PartialAsync("_LayoutHeaderPartial")
+        </header><!-- End .header -->
+  <main>
+      @RenderBody()
+  </main>
+
+  <div class="bg-white">
+            @await Html.PartialAsync("_LayoutNewsPartial")
+        </div>
+
+        <footer class="footer bg-white">
+            
+            @await Html.PartialAsync("_LayoutFooterPartial")
+            
+        </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+
+    <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-wrapper">
+            <span class="mobile-menu-close"><i class="porto-icon-retweet"></i></span>
+            <nav class="mobile-nav">
+                <ul class="mobile-menu">
+                    <li class="active"><a href="index-2.html">Home</a></li>
+                    <li>
+                        <a href="category.html">Categories</a>
+                        <ul>
+                            <li><a href="category.html">Full Width Banner</a></li>
+                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
+                            <li><a href="category.html">Left Sidebar</a></li>
+                            <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
+                            <li><a href="category-flex-grid.html">Product Flex Grid</a></li>
+                            <li><a href="category-horizontal-filter1.html">Horizontal Filter 1</a></li>
+                            <li><a href="category-horizontal-filter2.html">Horizontal Filter 2</a></li>
+                            <li><a href="#">Product List Item Types</a></li>
+                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll<span class="tip tip-new">New</span></a></li>
+                            <li><a href="category-3col.html">3 Columns Products</a></li>
+                            <li><a href="category.html">4 Columns Products</a></li>
+                            <li><a href="category-5col.html">5 Columns Products</a></li>
+                            <li><a href="category-6col.html">6 Columns Products</a></li>
+                            <li><a href="category-7col.html">7 Columns Products</a></li>
+                            <li><a href="category-8col.html">8 Columns Products</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="product.html">Products</a>
+                        <ul>
+                            <li>
+                                <a href="#">Variations</a>
+                                <ul>
+                                    <li><a href="product.html">Horizontal Thumbnails</a></li>
+                                    <li><a href="product-full-width.html">Vertical Thumbnails<span class="tip tip-hot">Hot!</span></a></li>
+                                    <li><a href="product.html">Inner Zoom</a></li>
+                                    <li><a href="product-addcart-sticky.html">Addtocart Sticky</a></li>
+                                    <li><a href="product-sidebar-left.html">Accordion Tabs</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Variations</a>
+                                <ul>
+                                    <li><a href="product-sticky-tab.html">Sticky Tabs</a></li>
+                                    <li><a href="product-simple.html">Simple Product</a></li>
+                                    <li><a href="product-sidebar-left.html">With Left Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Product Layout Types</a>
+                                <ul>
+                                    <li><a href="product.html">Default Layout</a></li>
+                                    <li><a href="product-extended-layout.html">Extended Layout</a></li>
+                                    <li><a href="product-full-width.html">Full Width Layout</a></li>
+                                    <li><a href="product-grid-layout.html">Grid Images Layout</a></li>
+                                    <li><a href="product-sticky-both.html">Sticky Both Side Info<span class="tip tip-hot">Hot!</span></a></li>
+                                    <li><a href="product-sticky-info.html">Sticky Right Side Info</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pages<span class="tip tip-hot">Hot!</span></a>
+                        <ul>
+                            <li><a href="cart.html">Shopping Cart</a></li>
+                            <li>
+                                <a href="#">Checkout</a>
+                                <ul>
+                                    <li><a href="checkout-shipping.html">Checkout Shipping</a></li>
+                                    <li><a href="checkout-shipping-2.html">Checkout Shipping 2</a></li>
+                                    <li><a href="checkout-review.html">Checkout Review</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#" class="login-link">Login</a></li>
+                            <li><a href="forgot-password.html">Forgot Password</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a>
+                        <ul>
+                            <li><a href="single.html">Blog Post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Special Offer!<span class="tip tip-hot">Hot!</span></a></li>
+                    <li><a href="https://1.envato.market/DdLk5" target="_blank">Buy Porto!</a></li>
+                </ul>
+            </nav><!-- End .mobile-nav -->
+
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank"><i class="porto-icon-facebook"></i></a>
+                <a href="#" class="social-icon" target="_blank"><i class="porto-icon-twitter"></i></a>
+                <a href="#" class="social-icon" target="_blank"><i class="porto-icon-instagram"></i></a>
+            </div><!-- End .social-icons -->
+        </div><!-- End .mobile-menu-wrapper -->
+    </div><!-- End .mobile-menu-container -->
+
+    <!-- newsletter-popup-form -->
+    @await Html.PartialAsync("_LayoutNewsPopupPartial")
+    <!-- End .newsletter-popup -->
+
+    <!-- Add Cart Modal -->
+    <div class="modal fade" id="addCartModal" tabindex="-1" role="dialog" aria-labelledby="addCartModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body add-cart-box text-center">
+            <p>You've just added this product to the<br>cart:</p>
+            <h4 id="productTitle"></h4>
+            <img src="#" id="productImage" width="100" height="100" alt="adding cart image">
+            <div class="btn-actions">
+                <a href="cart.html"><button class="btn-primary">Go to cart page</button></a>
+                <a href="#"><button class="btn-primary" data-dismiss="modal">Continue</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+
+    <a id="scroll-top" href="#top" title="Top" role="button"><i class="porto-icon-angle-up"></i></a>
+
+    <!-- Plugins JS File -->
+@await Html.PartialAsync("_LayoutJsPartial")
+@await RenderSectionAsync("Scripts",false)
 </body>
+
+
 </html>
