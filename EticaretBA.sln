@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EticaretBA.UI", "EticaretBA.UI\EticaretBA.UI.csproj", "{AAEEB9D1-F85A-4F34-873E-20E0B3B2DFBD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6780B8C-CE7A-4B0A-BC06-7EA5813ED754}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{236A6D6D-F6D2-4422-ADEB-85D29D6BA038}"
@@ -20,10 +18,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AAEEB9D1-F85A-4F34-873E-20E0B3B2DFBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAEEB9D1-F85A-4F34-873E-20E0B3B2DFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAEEB9D1-F85A-4F34-873E-20E0B3B2DFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAEEB9D1-F85A-4F34-873E-20E0B3B2DFBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBB482EE-9C30-4017-9F64-0A528A82A0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBB482EE-9C30-4017-9F64-0A528A82A0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB482EE-9C30-4017-9F64-0A528A82A0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU

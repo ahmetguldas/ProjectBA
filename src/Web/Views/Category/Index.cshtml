@@ -1,0 +1,455 @@
+@{
+    ViewData["Title"] = "Category Page";
+}
+
+<main class="main">
+            <div class="banner banner-cat" style="background-image: url('/images/banners/category-banner.jpg');">
+                <div class="container">
+                    <div class="banner-content">
+                        <h3 class="banner-subtitle">BOOK CLUB</h3>
+                        <h2 class="banner-title">Summer Reading</h2>
+                        <h3 class="banner-foot">The best books for your beach bag</h3>
+                    </div><!-- End .banner-content -->
+                    <button class="btn">EXPLORE BOOKS<i class="porto-icon-right"></i></button>
+                </div>
+            </div><!-- End .banner -->
+            
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Books</li>
+                    </ol>
+                </div><!-- End .container -->
+            </nav>
+
+            <div class="bg-white pt-35 pb-5">
+                <div class="container">
+                    <div class="row row-sm">
+                        <div class="col-12">
+                            <nav class="toolbox">
+                                <div class="toolbox-left">
+                                    <div class="toolbox-item toolbox-sort">
+                                        <div class="select-custom">
+                                            <select name="orderby" class="form-control">
+                                                <option value="menu_order" selected="selected">Default Sorting</option>
+                                                <option value="popularity">Sort by popularity</option>
+                                                <option value="rating">Sort by average rating</option>
+                                                <option value="date">Sort by newness</option>
+                                                <option value="price">Sort by price: low to high</option>
+                                                <option value="price-desc">Sort by price: high to low</option>
+                                            </select>
+                                        </div><!-- End .select-custom -->
+
+                                        <!-- <a href="#" class="sorter-btn" title="Set Ascending Direction"><span class="sr-only">Set Ascending Direction</span></a> -->
+                                    </div><!-- End .toolbox-item -->
+                                </div><!-- End .toolbox-left -->
+
+                                <div class="toolbox-item toolbox-show">
+                                    <label>Showing 1–12 of 60 results</label>
+                                </div><!-- End .toolbox-item -->
+
+                                <div class="layout-modes">
+                                    <a href="category.html" class="layout-btn btn-grid active" title="Grid">
+                                        <i class="porto-icon-mode-grid"></i>
+                                    </a>
+                                    <a href="category-list.html" class="layout-btn btn-list" title="List">
+                                        <i class="porto-icon-mode-list"></i>
+                                    </a>
+                                </div><!-- End .layout-modes -->
+                            </nav>
+
+                            <div class="row row-sm home-products-intro">
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product9.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product10.jpg"></a>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product11.jpg"></a>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product12.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product13.jpg"></a>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product14.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product15.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product16.jpg"></a>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product17.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product18.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product19.jpg"></a>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-8col">
+                                    <div class="home-product product-default inner-quickview">
+                                        <figure>
+                                            <a href="product.html"><img src="/images/products/product20.jpg"></a>
+                                            <div class="label-group">
+                                                <span class="product-label label-cut">27% OFF</span>
+                                            </div>
+                                        <div class="btn-icons">
+                                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="porto-icon-bag-2"></i></button>
+                                        </div>
+                                        <a href="ajax/product-quick-view.html" class="btn btn-quickview">QUICK VIEW</a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <div class="category-wrap">
+                                                <h2 class="product-category">CATEGORY</h2>
+                                                <a href="#"><i class="porto-icon-wishlist-2"></i></a>
+                                            </div>
+                                            <h2 class="product-title">
+                                                <a href="product.html">Product Short Name</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="old-price">$59.00</span>
+                                                <span class="product-price">$49.00</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <nav class="toolbox toolbox-pagination" style="align-items : flex-start;">
+                                <div class="toolbox-item toolbox-show">
+                                    <label>Showing 1–12 of 60 results</label>
+                                </div><!-- End .toolbox-item -->
+
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link page-link-btn" href="#"><i class="porto-icon-angle-left"></i></a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><span>.....</span></li>
+                                    <li class="page-item"><a class="page-link" href="#">15</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link page-link-btn" href="#"><i class="porto-icon-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div><!-- End .col-lg-9 -->
+                    </div>
+                </div>
+            </div><!-- End .container -->
+        </main><!-- End .main -->
