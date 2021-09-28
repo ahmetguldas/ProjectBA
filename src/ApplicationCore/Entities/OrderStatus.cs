@@ -8,6 +8,6 @@ namespace ApplicationCore.Entities
 {
    public class OrderStatus :BaseEntity
     {
-        public string Status { get; set; }
+        public string StatusDescription { get; set; }
     }
 }

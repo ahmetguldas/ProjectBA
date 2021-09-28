@@ -13,6 +13,8 @@ namespace ApplicationCore.Entities
         public DateTime OrderDate { get; set; }
         public DateTime ShipDate { get; set; }
         public int OrderStatusId { get; set; }
+        public int CustomerId { get; set; }
+        public virtual Customer Customer { get; set; }
         public virtual OrderStatus OrderStatus { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
