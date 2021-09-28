@@ -20,4 +20,8 @@
     <None Remove="app.db" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models" />
+  </ItemGroup>
+
 </Project>
