@@ -18,8 +18,8 @@ namespace Infrastructure.Data.Config
             builder.Property(o => o.Ammount).IsRequired();
             builder.Property(o => o.OrderDate).IsRequired();
             builder.Property(o => o.ShipDate).IsRequired();
-            builder.HasOne(o => o.OrderStatus).WithMany().HasForeignKey(x => x.OrderStatusId);
-            builder.HasOne(o => o.Customer).WithMany().HasForeignKey(x => x.CustomerId);
+           // builder.HasOne(o => o.OrderStatus).WithMany().HasForeignKey(x => x.OrderStatusId);
+           // builder.HasOne(o => o.Customer).WithMany().HasForeignKey(x => x.CustomerId);
         }
     }
 }

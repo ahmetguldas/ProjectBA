@@ -18,7 +18,7 @@ namespace Infrastructure.Data.Config
             builder.Property(r => r.CustomerEmail).IsRequired().HasMaxLength(50);
             builder.Property(r => r.Rating).HasMaxLength(50);
             builder.Property(r => r.Comment).IsRequired().HasMaxLength(100);
-            builder.HasOne(r => r.Product).WithMany().HasForeignKey(r => r.ProductId);
+          //  builder.HasOne(r => r.Product).WithMany().HasForeignKey(r => r.ProductId);
         }
     }
 }
