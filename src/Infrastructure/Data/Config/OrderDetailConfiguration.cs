@@ -15,7 +15,6 @@ namespace Infrastructure.Data.Config
         {
             builder.ToTable("OrderDetails");
             builder.Property(o => o.Quantity).IsRequired();
-            builder.Property(o => o.Price).IsRequired().HasColumnName("decimal(18,2)");
             builder.HasOne(o => o.Product).WithMany().HasForeignKey(o => o.ProductId);
             builder.HasOne(o => o.Order).WithMany().HasForeignKey(o => o.OrderId);
         }

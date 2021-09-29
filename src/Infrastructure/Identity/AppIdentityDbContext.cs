@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Web.Data
+namespace Infrastructure.Identity
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class AppIdentityDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
             : base(options)
         {
         }

@@ -17,8 +17,8 @@ namespace Infrastructure.Data.Config
             builder.HasOne(x => x.Author).WithMany().HasForeignKey(x => x.AuthorId);
             builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Description).IsRequired().HasMaxLength(1000);
-            builder.Property(x => x.Image).IsRequired().HasMaxLength(250);
-            builder.Property(x => x.CreatedTime).IsRequired();
+            builder.Property(x => x.Image).IsRequired(false).HasMaxLength(250);
+           // builder.Property(x => x.CreatedTime).IsRequired();
 
         }
     }
