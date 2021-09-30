@@ -8,9 +8,7 @@ namespace Infrastructure.Data.Config
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.ToTable("Categories");
-            builder.Property(c => c.CategoryName).IsRequired().HasMaxLength(100);
-            builder.Property(c => c.Description).IsRequired().HasMaxLength(250);
+            builder.Property(x => x.CategoryName).IsRequired().HasMaxLength(100);
         }
     }
 }
