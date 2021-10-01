@@ -9,7 +9,7 @@ namespace Infrastructure.Data.Config
         public void Configure(EntityTypeBuilder<OrderStatus> builder)
         {
             builder.ToTable("Order Statuses");
-            builder.Property(o => o.StatusDescription).IsRequired().HasMaxLength(100);
+            builder.Property(o => o.StatusDescription).HasMaxLength(100);
         }
     }
 }

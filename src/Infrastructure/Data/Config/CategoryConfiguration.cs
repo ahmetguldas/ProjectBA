@@ -10,7 +10,7 @@ namespace Infrastructure.Data.Config
         {
             builder.ToTable("Categories");
             builder.Property(c => c.CategoryName).IsRequired().HasMaxLength(100);
-            builder.Property(c => c.Description).IsRequired().HasMaxLength(250);
+           // builder.Property(c => c.Description).IsRequired().HasMaxLength(250);
         }
     }
 }

@@ -10,6 +10,6 @@ namespace ApplicationCore.Entities
         public string Country { get; set; }
         public string City { get; set; }
         public int Phone { get; set; }
-        public virtual List<Order> Orders { get; set; }
+       // public virtual List<Order> Orders { get; set; }
     }
 }

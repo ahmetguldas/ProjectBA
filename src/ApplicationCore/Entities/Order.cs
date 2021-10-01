@@ -13,7 +13,7 @@ namespace ApplicationCore.Entities
         public virtual Customer Customer { get; set; }
         public int OrderStatusId { get; set; }
         public virtual OrderStatus OrderStatus { get; set; }
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+      //  public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
     }
 }

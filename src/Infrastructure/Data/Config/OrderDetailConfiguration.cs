@@ -10,8 +10,9 @@ namespace Infrastructure.Data.Config
         {
             builder.ToTable("OrderDetails");
             builder.Property(o => o.Quantity).IsRequired();
-           // builder.HasOne(o => o.Product).WithMany().HasForeignKey(o => o.ProductId);
-           // builder.HasOne(o => o.Order).WithMany().HasForeignKey(o => o.OrderId);
+           // builder.HasOne(x => x.Product).WithMany().HasForeignKey(x => x.ProductId);
+           // builder.HasOne(x => x.Order).WithMany().HasForeignKey(x => x.OrderId); //
+
         }
     }
 }
