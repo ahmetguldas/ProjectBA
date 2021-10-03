@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211001190341_Ilk")]
-    partial class Ilk
+    [Migration("20211002231552_data")]
+    partial class data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

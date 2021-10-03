@@ -13,8 +13,7 @@ namespace Infrastructure.Data
         public static async Task SeedAsync(ApplicationDbContext dbContext)
         {
             if (await dbContext.Categories.AnyAsync() || await dbContext.Products.AnyAsync() || await dbContext.Authors.AnyAsync()) return;
-
-            //veritabanı boşsa burayı koy
+            
 
             
             var cat3 = new Category() { CategoryName = "Roman" };
