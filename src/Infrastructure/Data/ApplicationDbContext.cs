@@ -8,7 +8,7 @@ namespace Infrastructure.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
+            Database.Migrate();
         }
         
         public DbSet<Category> Categories { get; set; }
