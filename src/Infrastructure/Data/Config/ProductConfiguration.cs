@@ -15,8 +15,8 @@ namespace Infrastructure.Data.Config
                 .IsRequired().HasColumnType("decimal(18,2)");
            builder.HasOne(x => x.Category).WithMany().HasForeignKey(x => x.CategoryId);
             builder.HasOne(x => x.Author).WithMany().HasForeignKey(x => x.AuthorId);
-            builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.Description).IsRequired().HasMaxLength(1000);
+            builder.Property(x => x.Title).HasMaxLength(100);
+            builder.Property(x => x.Description).HasMaxLength(1000);
             builder.Property(x => x.Image).IsRequired().HasMaxLength(250);
             
         }
