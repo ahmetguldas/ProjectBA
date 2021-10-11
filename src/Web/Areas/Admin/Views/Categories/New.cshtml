@@ -1,0 +1,85 @@
+﻿<div class="container container--max--xl">
+    <div class="py-5">
+        <div class="row g-4 align-items-center">
+            <div class="col">
+                <nav class="mb-2" aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-sa-simple">
+                        <li class="breadcrumb-item"><a href="index-2.html">Dashboard</a></li>
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Categories" asp-action="Index">Kategoriler</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Yeni Kategori</li>
+                    </ol>
+                </nav>
+                <h1 class="h3 m-0">Yeni Kategori</h1>
+            </div>
+            <div class="col-auto d-flex">
+                <a href="#" class="btn btn-primary">Kaydet</a>
+            </div>
+        </div>
+    </div>
+    <div class="sa-entity-layout"
+         data-sa-container-query="{&quot;920&quot;:&quot;sa-entity-layout--size--md&quot;,&quot;1100&quot;:&quot;sa-entity-layout--size--lg&quot;}">
+        <div class="sa-entity-layout__body">
+            <div class="sa-entity-layout__main">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <div class="mb-5">
+                            <h2 class="mb-0 fs-exact-18">Kategori Bilgileri</h2>
+                        </div>
+                        <div class="mb-4">
+                            <label for="form-category/name"
+                                   class="form-label">Adi</label><input type="text"
+                                                                         class="form-control" id="form-category/name" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="form-category/description"
+                                   class="form-label">Description</label><textarea id="form-category/description" class="sa-quill-control form-control"
+                                                                                   rows="8">aciklama</textarea>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="sa-entity-layout__sidebar">
+                
+                <div class="card w-100 mt-5">
+                    <div class="card-body p-5">
+                        <div class="mb-5">
+                            <h2 class="mb-0 fs-exact-18">Alt Kategori</h2>
+                        </div><select class="sa-select2 form-select">
+                            <option>[None]</option>
+                            <option selected="">Tools</option>
+                            <option>Screwdrivers</option>
+                            <option>Chainsaws</option>
+                            <option>Hand tools</option>
+                            <option>Machine tools</option>
+                            <option>Power machinery</option>
+                            <option>Measurements</option>
+                            <option>Power tools</option>
+                        </select>
+                        <div class="form-text">
+                            Mevcut olan bir alt kategori seçebilirsiniz.
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 mt-5">
+                    <div class="card-body p-5">
+                        <div class="mb-5">
+                            <h2 class="mb-0 fs-exact-18">Resim</h2>
+                        </div>
+                        <div class="border p-4 d-flex justify-content-center">
+                            <div class="max-w-20x">
+                                <img src="images/products/product-7-320x320.jpg"
+                                     class="w-100 h-auto" width="320" height="320" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-n2">
+                            <a href="#" class="me-3 pe-2">Resmi Değiştir</a><a href="#" class="text-danger me-3 pe-2">Resmi Sil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,10 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 namespace Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController : Controller
+    public class CategoriesController : Controller
     {
         // GET
         public IActionResult Index()
+        {
+
+            return View();
+        }
+
+        public IActionResult New()
         {
             return View();
         }
@@ -15,5 +21,11 @@ namespace Web.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult Delete()
+        {
+            return View();
+        }
+
     }
 }
