@@ -1,4 +1,23 @@
-﻿<div class="container container--max--xl">
+﻿@model Web.Areas.Admin.Models.EditCategoryViewModel
+@{
+    ViewData["Title"] = "Not Düzenle";
+}
+<h1>Not Düzenle</h1>
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="CategoryName"></label>
+        <input asp-for="CategoryName" class="form-control" />
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+    
+    <button class="btn btn-primary">Kaydet</button>
+    <a class="btn btn-danger" asp-area="Admin" asp-controller="Categories" asp-action="Index">İptal</a>
+</form>
+
+
+
+<div class="container container--max--xl">
     <div class="py-5">
         <div class="row g-4 align-items-center">
             <div class="col">
@@ -30,20 +49,20 @@
                         <div class="mb-4">
                             <label for="form-category/name"
                                    class="form-label">Adı</label><input type="text"
-                                                                         class="form-control" id="form-category/name"/>
+                                                                        class="form-control" id="form-category/name" />
                         </div>
-                        
+
                         <div class="mb-4">
                             <label for="form-category/description"
                                    class="form-label">Açıklama</label><textarea id="form-category/description" class="sa-quill-control form-control"
-                                                                                   rows="8">açıklama</textarea>
+                                                                                rows="8">açıklama</textarea>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="sa-entity-layout__sidebar">
-                
+
                 <div class="card w-100 mt-5">
                     <div class="card-body p-5">
                         <div class="mb-5">
@@ -60,7 +79,7 @@
                             <option>Power tools</option>
                         </select>
                         <div class="form-text">
-                            
+
                         </div>
                     </div>
                 </div>
