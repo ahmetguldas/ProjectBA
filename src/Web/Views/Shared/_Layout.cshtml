@@ -159,12 +159,12 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-body add-cart-box text-center">
-            <p>You've just added this product to the<br>cart:</p>
+              <p>Bu ürünü sepete yeni eklediniz</p>
             <h4 id="productTitle"></h4>
             <img src="#" id="productImage" width="100" height="100" alt="adding cart image">
             <div class="btn-actions">
-                <a href="cart.html"><button class="btn-primary">Go to cart page</button></a>
-                <a href="#"><button class="btn-primary" data-dismiss="modal">Continue</button></a>
+                <a asp-controller="Basket" asp-action="Index"><button class="btn-primary">Sepetim</button></a>
+                <a href="#"><button class="btn-primary" data-dismiss="modal">Alışverişe Devam</button></a>
             </div>
           </div>
         </div>

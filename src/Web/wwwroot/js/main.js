@@ -529,54 +529,7 @@
         }, currentIndex);
       });
 
-      //QuickView Popup
-      $('a.btn-quickview').on('click', function (e) {
-        e.preventDefault();
-        Porto.ajaxLoading();
-        var ajaxUrl = $(this).attr('href');
-        setTimeout(function () {
-          $.magnificPopup.open({
-            type: 'ajax',
-            mainClass: "mfp-ajax-product",
-            tLoading: '',
-            preloader: false,
-            removalDelay: 350,
-            items: {
-              src: ajaxUrl
-            },
-            callbacks: {
-              open: function() {
-                var newMargin = Number($('.sticky-header.fixed').css('margin-right').slice(0, -2))+17+'px';
-                $('.sticky-header.fixed').css('margin-right', newMargin);
-                $('.sticky-header.fixed-nav').css('margin-right', newMargin);
-                $('#scroll-top').css('margin-right', newMargin);
-              },
-              ajaxContentAdded: function () {
-                Porto.owlCarousels();
-                Porto.quantityInputs();
-                if (typeof addthis !== 'undefined') {
-                  addthis.layers.refresh();
-                }
-                else {
-                  $.getScript("https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b927288a03dbde6");
-                }
-              },
-              beforeClose: function () {
-                $('.ajax-overlay').remove();
-              },
-              afterClose: function() {
-                var newMargin = Number($('.sticky-header.fixed').css('margin-right').slice(0, -2))-17+'px';
-                $('.sticky-header.fixed').css('margin-right', newMargin);
-                $('.sticky-header.fixed-nav').css('margin-right', newMargin);
-                $('#scroll-top').css('margin-right', newMargin);
-              }
-            },
-            ajax: {
-              tError: '',
-            }
-          });
-        }, 500);
-      });
+    
     },
     productTabSroll: function () {
       // Scroll to product details tab and show review tab - product pages

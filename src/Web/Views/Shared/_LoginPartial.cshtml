@@ -8,8 +8,11 @@
             <div class="header-user">
                 <i class="porto-icon-user-2"></i>
                 <div class="header-userinfo-2">
-                    <span>Merhaba!</span>
-                    <h4>@User.Identity.Name!</h4>
+                    <span>Merhaba! </span>
+                    <h4>@User.Identity.Name</h4>
+                    <form style="display: none" id="myForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    </form>
+                    <a href="javascript:myFunction()"><span>Çıkış Yap</span></a>
                 </div>
             </div>
         </a>
@@ -36,3 +39,8 @@
         </a>
 
     </div><!-- End .dropdown -->
+<script>
+    function myFunction() {
+        document.getElementById("myForm").submit();
+    }
+</script>
