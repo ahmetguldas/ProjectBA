@@ -1,0 +1,49 @@
+﻿@model BasketViewModel
+    <input type="hidden" id="basketItemsCount" value="@Model.Items.Count" />
+
+    <div class=" d-flex justify-content-between align-items-baseline mt-4">
+        <h2>Sepet</h2>
+        <span class="h3 text-dark">
+            <i class="fas fa-shopping-basket"></i>
+        </span>
+    </div>
+    <div class="row align-items-center border-bottom border-top py-2 font-weight-bold">
+        <div class="col-6">
+            Ürün
+        </div>
+        <div class="col-2">
+            Fiyat
+        </div>
+        <div class="col-2">
+            Miktar
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+    @foreach (var item in Model.Items)
+    {
+        <div class="row align-items-center border-bottom py-3">
+            <div class="col-6 d-flex align-items-center">
+                <img src="~/img/@item.PictureUri" class="mr-2" alt="" height="50" />
+                <span>@item.ProductName</span>
+            </div>
+            <div class="col-2">
+                @item.Price.ToString("c2")
+            </div>
+            <div class="col-2">
+                <input type="number" min="1" value="@item.Quantity" class="form-control" data-update-basket-item="@item.Id" />
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-danger float-right" data-remove-basket-item="@item.Id">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    }
+    <div class="border-bottom py-4 d-flex justify-content-end row">
+        <span class="h4 mr-5">
+            Total
+        </span>
+        <span class="h4 mr-3"> @Model.TotalPrice().ToString("c2")</span>
+    </div>

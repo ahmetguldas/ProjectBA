@@ -1,0 +1,48 @@
+﻿@model BasketViewModel
+@{
+    ViewData["Title"] = "Basket";
+}
+<div id="basket">
+    <partial name="_BasketPartial" model="Model" />
+</div>
+
+<div class="d-flex justify-content-between py-3">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Alışverişe Devam Et</a>
+    <a asp-controller="Basket" asp-action="Checkout" class="btn btn-success">Ödeme Yap</a>
+</div>
+
+@section scripts {
+    <script>
+        $("body").on("change", "[data-update-basket-item]", function (event) {
+            var basketItemId = $(this).data("update-basket-item");
+            var quantity = Number($(this).val());
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("UpdateBasketItem", "Basket")",
+                data: { basketItemId, quantity },
+                success: function (data) {
+                    $("#basket").html(data);
+                    var basketItemsCount = $("#basketItemsCount").val();
+                    $("#navBasketItemsCount").text(basketItemsCount);
+                }
+            });
+        });
+
+        $("body").on("click", "[data-remove-basket-item]", function (event) {
+            event.preventDefault();
+            var basketItemId = $(this).data("remove-basket-item");
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("RemoveBasketItem", "Basket")",
+                data: { basketItemId },
+                success: function (data) {
+                    $("#basket").html(data);
+                    var basketItemsCount = $("#basketItemsCount").val();
+                    $("#navBasketItemsCount").text(basketItemsCount);
+                }
+            });
+        })
+    </script>
+}

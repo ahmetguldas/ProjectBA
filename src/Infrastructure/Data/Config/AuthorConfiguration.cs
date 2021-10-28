@@ -8,8 +8,9 @@ namespace Infrastructure.Data.Config
     {
         public void Configure(EntityTypeBuilder<Author> builder)
         {
-            builder.ToTable("Authors");
-            builder.Property(a => a.AuthorName).IsRequired().HasMaxLength(50);
+            builder.Property(x => x.AuthorName)
+                .IsRequired()
+                .HasMaxLength(100);
         }
     }
 }

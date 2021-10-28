@@ -1,7 +1,10 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using ApplicationCore.Entities;
+﻿using ApplicationCore.Entities;
 using Ardalis.Specification;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ApplicationCore.Interfaces
 {
@@ -9,14 +12,11 @@ namespace ApplicationCore.Interfaces
     {
         Task<T> GetByIdAsync(int id);
         Task<List<T>> ListAllAsync();
-        Task<List<T>> ListAsync(Specification<T> spec);
+        Task<List<T>> ListAsync(ISpecification<T> spec);
         Task<T> AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
         Task<int> CountAsync(ISpecification<T> spec);
-        Task<T> FirstAsync(ISpecification<T> spec);
         Task<T> FirstOrDefaultAsync(ISpecification<T> spec);
-        
-
     }
 }

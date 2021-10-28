@@ -1,0 +1,18 @@
+﻿@model PaginationInfoViewModel
+@{ 
+    var onceki = Context.Request.Query.ToDictionary(x => x.Key, x => x.Value.ToString());
+    onceki.Remove("page");
+    onceki.Add("page", (Model.Page - 1).ToString()); 
+    var sonraki = Context.Request.Query.ToDictionary(x => x.Key, x => x.Value.ToString());
+    sonraki.Remove("page");
+    sonraki.Add("page", (Model.Page + 1).ToString());
+}
+<div class="d-flex justify-content-between align-items-baseline">
+    <a asp-action="Index" asp-all-route-data="@onceki" class="btn btn-dark @(Model.HasPrev ? "" : "disabled")">
+        &laquo; <span class="d-none d-sm-inline">Öncesi</span>
+    </a>
+    <span>@Model.TotalItems sayfadan @Model.ItemsOnPage tane gösteriliyor (@Model.Page / @Model.TotalPages)</span>
+    <a asp-action="Index" asp-all-route-data="@sonraki" class="btn btn-info @(Model.HasNext ? "" : "disabled")">
+        <span class="d-none d-sm-inline">Sonrası</span> &raquo;
+    </a>
+</div>

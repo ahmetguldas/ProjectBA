@@ -63,7 +63,7 @@
                 <ul class="mobile-menu">
                     <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
                     <li>
-                        <a asp-controller="Category" asp-action="Index">Categories</a>
+                        <a asp-controller="" asp-action="Index">Categories</a>
                         <ul>
                             <li><a href="category.html">Full Width Banner</a></li>
                             <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
@@ -120,7 +120,7 @@
                     <li>
                         <a href="#">Pages<span class="tip tip-hot">Hot!</span></a>
                         <ul>
-                            <li><a asp-controller="Cart" asp-action="Index">Shopping Cart</a></li>
+                            <li><a asp-controller="" asp-action="Index">Shopping Cart</a></li>
                             <li>
                                 <a href="#">Checkout</a>
                                 <ul>
@@ -129,17 +129,17 @@
                                     <li><a href="checkout-review.html">Checkout Review</a></li>
                                 </ul>
                             </li>
-                            <li><a asp-controller="AboutUs" asp-action="Index">About</a></li>
-                            <li><a asp-controller="LoginAndCreate" asp-action="Index" class="login-link">Login</a></li>
-                            <li><a asp-controller="LoginAndCreate" asp-action="ResetPassword">Forgot Password</a></li>
+                            <li><a asp-controller="" asp-action="Index">About</a></li>
+                            <li><a asp-controller="" asp-action="Index" class="login-link">Login</a></li>
+                            <li><a asp-controller="" asp-action="">Forgot Password</a></li>
                         </ul>
                     </li>
-                    <li><a asp-controller="Blog" asp-action="Index">Blog</a>
+                    <li><a asp-controller="" asp-action="Index">Blog</a>
                         <ul>
-                            <li><a asp-controller="Blog" asp-action="Details">Blog Post</a></li>
+                            <li><a asp-controller="" asp-action="Details">Blog Post</a></li>
                         </ul>
                     </li>
-                    <li><a asp-controller="ContactUs" asp-action="Index">Contact Us</a></li>
+                    <li><a asp-controller="" asp-action="Index">Contact Us</a></li>
                     <li><a href="#">Special Offer!<span class="tip tip-hot">Hot!</span></a></li>
                     
                 </ul>
@@ -153,9 +153,6 @@
         </div><!-- End .mobile-menu-wrapper -->
     </div><!-- End .mobile-menu-container -->
 
-    <!-- newsletter-popup-form -->
-    @await Html.PartialAsync("_LayoutNewsPopupPartial")
-    <!-- End .newsletter-popup -->
 
     <!-- Add Cart Modal -->
     <div class="modal fade" id="addCartModal" tabindex="-1" role="dialog" aria-labelledby="addCartModal" aria-hidden="true">

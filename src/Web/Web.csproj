@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ViewModels\**" />
-    <Content Remove="ViewModels\**" />
-    <EmbeddedResource Remove="ViewModels\**" />
-    <None Remove="ViewModels\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.10" />
@@ -32,7 +25,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\Admin" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Kategoriler\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Kategoriler\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Kategoriler\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Kategoriler\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Kategoriler\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <None Include="Areas\Admin\Views\Urunler\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Urunler\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Urunler\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Urunler\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Urunler\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Yazarlar\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Yazarlar\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Yazarlar\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Yazarlar\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Yazarlar\Index.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <None Include="Areas\Identity\Pages\_ViewStart.cshtml" />
+    <None Include="Views\Basket\Checkout.cshtml" />
+    <None Include="Views\Basket\Index.cshtml" />
+    <None Include="Views\Basket\Success.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
