@@ -1,49 +1,181 @@
 ﻿@model BasketViewModel
-    <input type="hidden" id="basketItemsCount" value="@Model.Items.Count" />
+<input type="hidden" id="basketItemsCount" value="@Model.Items.Count" />
 
-    <div class=" d-flex justify-content-between align-items-baseline mt-4">
-        <h2>Sepet</h2>
-        <span class="h3 text-dark">
-            <i class="fas fa-shopping-basket"></i>
-        </span>
-    </div>
-    <div class="row align-items-center border-bottom border-top py-2 font-weight-bold">
-        <div class="col-6">
-            Ürün
-        </div>
-        <div class="col-2">
-            Fiyat
-        </div>
-        <div class="col-2">
-            Miktar
-        </div>
-        <div class="col-2">
 
-        </div>
-    </div>
-    @foreach (var item in Model.Items)
-    {
-        <div class="row align-items-center border-bottom py-3">
-            <div class="col-6 d-flex align-items-center">
-                <img src="~/img/@item.PictureUri" class="mr-2" alt="" height="50" />
-                <span>@item.ProductName</span>
-            </div>
-            <div class="col-2">
-                @item.Price.ToString("c2")
-            </div>
-            <div class="col-2">
-                <input type="number" min="1" value="@item.Quantity" class="form-control" data-update-basket-item="@item.Id" />
-            </div>
-            <div class="col-2">
-                <button class="btn btn-sm btn-danger float-right" data-remove-basket-item="@item.Id">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div>
-        </div>
-    }
-    <div class="border-bottom py-4 d-flex justify-content-end row">
-        <span class="h4 mr-5">
-            Total
-        </span>
-        <span class="h4 mr-3"> @Model.TotalPrice().ToString("c2")</span>
-    </div>
+@{
+    ViewData["Title"] = "Sepetim";
+}
+
+<main class="main">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-4">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Alışveriş Sepeti</li>
+            </ol>
+        </div><!-- End .container -->
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-table-container">
+                    <table class="table table-cart">
+                        <thead>
+                            <tr>
+                                <th class="product-col">Ürünler</th>
+                                <th class="price-col">Fiyat</th>
+                                <th class="qty-col">Miktar</th>
+                                <th>Ara Toplam</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr class="product-row">
+                                <td class="product-col">
+                                    <figure class="product-image-container">
+                                        <a href="product.html" class="product-image">
+                                            <img src="~/Kitaplar/@item.PictureUri" alt="product">
+                                        </a>
+                                    </figure>
+                                    <h2 class="product-title">
+                                        <a href="product.html">@item.ProductName</a>
+                                    </h2>
+                                </td>
+                                <td>₺17.90</td>
+                                <td>
+                                    <input class=" form-control" type="number" value="@item.Quantity" data-update-basket-item="@item.Id">
+                                </td>
+                                <td>₺17.90</td>
+                            </tr>
+                            <tr class="product-action-row">
+                                <td colspan="4" class="clearfix">
+                                    <div class="float-left">
+                                        <a href="#" class="btn-move">Favorilerime Taşı</a>
+                                    </div><!-- End .float-left -->
+
+                                    <div class="float-right">
+                                        <a href="#" title="Ürünü Düzenle" class="btn-edit"><span class="sr-only">Düzenle</span><i class="porto-icon-pencil"></i></a>
+                                        <a data-remove-basket-item="@item.Id" title="Ürünü Sil" class="btn-remove"><span class="sr-only">Sil</span></a>
+                                    </div><!-- End .float-right -->
+                                </td>
+                            </tr>
+                        }
+
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" class="clearfix">
+                                    <div class="float-left">
+                                        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Alışverişe Devam Et</a>
+                                    </div><!-- End .float-left -->
+
+                                    <div class="float-right">
+                                        <a href="#" class="btn btn-outline-secondary btn-clear-cart">Sepetimi Boşalt</a>
+                                        <a href="#" class="btn btn-outline-secondary btn-update-cart">Sepetimi Güncelle</a>
+                                    </div><!-- End .float-right -->
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div><!-- End .cart-table-container -->
+
+                <div class="cart-discount">
+                    <h4>İndirim Kodunu Uygula</h4>
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Enter discount code" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-primary" type="submit">İndirim Uygula</button>
+                            </div>
+                        </div><!-- End .input-group -->
+                    </form>
+                </div><!-- End .cart-discount -->
+            </div><!-- End .col-lg-8 -->
+
+            <div class="col-lg-4">
+                <div class="cart-summary">
+                    <h3>Özet</h3>
+
+                    <h4>
+                        <a data-toggle="collapse" href="#total-estimate-section" class="collapsed" role="button" aria-expanded="false" aria-controls="total-estimate-section">Tahmini Nakliye ve Vergi</a>
+                    </h4>
+
+                    <div class="collapse" id="total-estimate-section">
+                        <form action="#">
+                            <div class="form-group form-group-sm">
+                                <label>Ülke</label>
+                                <div class="select-custom">
+                                    <select class="form-control form-control-sm">
+                                        <option value="Turkey">Türkiye</option>
+                                        <option value="China">Çin</option>
+                                        <option value="Germany">Almanya</option>
+                                    </select>
+                                </div><!-- End .select-custom -->
+                            </div><!-- End .form-group -->
+
+                            <div class="form-group form-group-sm">
+                                <label>Eyalet/İl</label>
+                                <div class="select-custom">
+                                    <select class="form-control form-control-sm">
+                                        <option value="AN">Ankara</option>
+                                        <option value="Co">Çorum</option>
+                                    </select>
+                                </div><!-- End .select-custom -->
+                            </div><!-- End .form-group -->
+
+                            <div class="form-group form-group-sm">
+                                <label>Posta Kodu</label>
+                                <input type="text" class="form-control form-control-sm">
+                            </div><!-- End .form-group -->
+
+                            <div class="form-group form-group-custom-control">
+                                <label>PTT</label>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="flat-rate">
+                                    <label class="custom-control-label" for="flat-rate">Standart ₺5.00</label>
+                                </div><!-- End .custom-checkbox -->
+                            </div><!-- End .form-group -->
+
+                            <div class="form-group form-group-custom-control">
+                                <label>En İyi Teklif</label>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="best-rate">
+                                    <label class="custom-control-label" for="best-rate">₺15.00</label>
+                                </div><!-- End .custom-checkbox -->
+                            </div><!-- End .form-group -->
+                        </form>
+                    </div><!-- End #total-estimate-section -->
+
+                    <table class="table table-totals">
+                        <tbody>
+                            <tr>
+                                <td>Ara Toplam</td>
+                                <td>@Model.TotalPrice().ToString("c2")</td>
+                            </tr>
+
+                            <tr>
+                                <td>Vergi</td>
+                                <td>₺0.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Sipariş Toplamı</td>
+                                <td>@Model.TotalPrice().ToString("c2")</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <div class="checkout-methods">
+                        <a asp-controller="Basket" asp-action="Checkout" class="btn btn-block btn-sm btn-primary">Ödeme Sayfasına Geç</a>
+                    </div><!-- End .checkout-methods -->
+                </div><!-- End .cart-summary -->
+            </div><!-- End .col-lg-4 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+
+    <div class="mb-6"></div><!-- margin -->
+</main><!-- End .main -->

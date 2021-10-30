@@ -1,6 +1,6 @@
 ﻿@model HomeIndexViewModel
 @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery ind
-@{ ViewData["Title"] = "Home Page";
+@{ ViewData["Title"] = "Anasayfa";
     var token = ind.GetAndStoreTokens(Context).RequestToken; }
 
 
@@ -14,7 +14,7 @@
                 
                 <div class="home-product  inner-quickview">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="~/Kitaplar/@product.PictureUri"/>
                         </a>
                         <div class="btn-icons">
